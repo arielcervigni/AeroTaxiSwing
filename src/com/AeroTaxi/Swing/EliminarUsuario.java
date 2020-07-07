@@ -1,10 +1,8 @@
 package com.AeroTaxi.Swing;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Locale;
 
 public class EliminarUsuario extends JFrame{
     private JPanel eliminarUsuarioPanel;
@@ -25,7 +23,18 @@ public class EliminarUsuario extends JFrame{
         btn_aceptar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showConfirmDialog(eliminarUsuarioPanel,"¿Desea eliminar el usuario?");
+                int seleccion = JOptionPane.showOptionDialog(eliminarUsuarioPanel,"¿Desea eliminar el usuario?",
+                        "Eliga una opción", JOptionPane.YES_NO_CANCEL_OPTION,
+                        JOptionPane.QUESTION_MESSAGE,null,
+                        new Object[] { "Si", "No", "Cancelar"},"Si");
+                if (seleccion == JOptionPane.OK_OPTION){
+                    texto.setText("Usuario Eliminado.");
+                    setVisible(false);
+                    new HomeAdmin();
+                }
+                else
+                    texto.setText("El usuario NO se ha eliminado.");
+
             }
         });
         btn_volver.addActionListener(new ActionListener() {
