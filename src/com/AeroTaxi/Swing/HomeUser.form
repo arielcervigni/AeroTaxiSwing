@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.AeroTaxi.Swing.HomeUser">
+  <grid id="27dc6" binding="panel2" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="e8b9b" binding="barra" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <vspacer id="e01b7">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <grid id="23869" class="javax.swing.JMenuBar" binding="menu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="17875" class="javax.swing.JMenu" binding="usuario" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                <constraints/>
+                <properties>
+                  <horizontalAlignment value="11"/>
+                  <horizontalTextPosition value="11"/>
+                  <text value="Usuario"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="92921" class="javax.swing.JMenuItem">
+                    <constraints/>
+                    <properties>
+                      <horizontalAlignment value="2"/>
+                      <text value="Mi usuario"/>
+                    </properties>
+                  </component>
+                  <hspacer id="fdabf">
+                    <constraints/>
+                  </hspacer>
+                  <vspacer id="7bf93">
+                    <constraints/>
+                  </vspacer>
+                  <component id="eeb98" class="javax.swing.JMenuItem" binding="cerrarSesion">
+                    <constraints/>
+                    <properties>
+                      <text value="Cerrar sesión"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="de194" class="javax.swing.JMenu" binding="reservas" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                <constraints/>
+                <properties>
+                  <horizontalAlignment value="11"/>
+                  <text value="Reservas"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="948e6" class="javax.swing.JMenuItem" binding="misReservas">
+                    <constraints/>
+                    <properties>
+                      <horizontalAlignment value="2"/>
+                      <horizontalTextPosition value="2"/>
+                      <text value="Mis Reserva"/>
+                    </properties>
+                  </component>
+                  <hspacer id="838bd">
+                    <constraints/>
+                  </hspacer>
+                  <vspacer id="62bc5">
+                    <constraints/>
+                  </vspacer>
+                  <component id="7e4f7" class="javax.swing.JMenuItem" binding="crearReserva">
+                    <constraints/>
+                    <properties>
+                      <text value="Crear Reserva"/>
+                    </properties>
+                  </component>
+                  <component id="226" class="javax.swing.JMenuItem" binding="cancelarReserva">
+                    <constraints/>
+                    <properties>
+                      <text value="Cancelar Reserva"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
