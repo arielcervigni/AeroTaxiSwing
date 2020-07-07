@@ -27,7 +27,7 @@ public class Login extends JFrame {
         setVisible(true);
         //pack();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        panel.setFocusable(true);
+        tf_dni.setFocusable(true);
 
         btn_aceptar.addActionListener(new ActionListener() {
             @Override

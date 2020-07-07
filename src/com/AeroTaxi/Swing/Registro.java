@@ -20,8 +20,12 @@ public class Registro extends JFrame {
     private JLabel lb_password;
     private JCheckBox confirmar;
     private JTextArea textArea1;
-    private JButton btn_cancelar;
+    private JButton btn_volver;
     private JButton btn_aceptar;
+
+    public JPanel getRegistro() {
+        return registro;
+    }
 
     public Registro() {
         setContentPane(registro);
@@ -34,7 +38,8 @@ public class Registro extends JFrame {
         tf_apellido.setToolTipText("Ingrese su apellido.");
         tf_edad.setToolTipText("Ingrese su edad.");
         btn_aceptar.setEnabled(false);
-        btn_cancelar.addActionListener(new ActionListener() {
+
+        btn_volver.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
@@ -60,5 +65,43 @@ public class Registro extends JFrame {
             }
         });
         }
+
+    public Registro(int opcion) {
+        super("Registrar nuevo usuario.");
+        setContentPane(registro);
+        setBounds(20,20,500,500);
+        setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        tf_dni.setToolTipText("Ingrese su número de DNI.");
+        tf_pw.setToolTipText("Su contraseña no podrá tener menos de 4 dígitos.");
+        tf_nombre.setToolTipText("Ingrese su nombre.");
+        tf_apellido.setToolTipText("Ingrese su apellido.");
+        tf_edad.setToolTipText("Ingrese su edad.");
+        btn_aceptar.setEnabled(false);
+
+        btn_volver.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                new HomeAdmin();
+            }
+        });
+
+        confirmar.addActionListener(new ActionListener() {
+            @Override
+
+            public void actionPerformed(ActionEvent e) {
+
+                btn_aceptar.setEnabled(confirmar.isSelected());
+            }
+        });
+
+        btn_aceptar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // guardar usuario nuevo
+            }
+        });
+    }
 
     }
