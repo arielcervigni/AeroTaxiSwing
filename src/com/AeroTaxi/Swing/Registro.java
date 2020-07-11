@@ -22,16 +22,19 @@ public class Registro extends JFrame {
     private JTextArea textArea1;
     private JButton btn_volver;
     private JButton btn_aceptar;
+    private Login login;
 
     public JPanel getRegistro() {
         return registro;
     }
 
-    public Registro() {
+    public Registro(){
+        super("Registro.");
         setContentPane(registro);
-        setBounds(20,20,500,500);
         setVisible(true);
+        setBounds(20,20,500,500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+
         tf_dni.setToolTipText("Ingrese su número de DNI.");
         tf_pw.setToolTipText("Su contraseña no podrá tener menos de 4 dígitos.");
         tf_nombre.setToolTipText("Ingrese su nombre.");
@@ -68,10 +71,6 @@ public class Registro extends JFrame {
 
     public Registro(int opcion) {
         super("Registrar nuevo usuario.");
-        setContentPane(registro);
-        setBounds(20,20,500,500);
-        setVisible(true);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
         tf_dni.setToolTipText("Ingrese su número de DNI.");
         tf_pw.setToolTipText("Su contraseña no podrá tener menos de 4 dígitos.");
         tf_nombre.setToolTipText("Ingrese su nombre.");

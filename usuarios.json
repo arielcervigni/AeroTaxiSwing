@@ -1,0 +1,37 @@
+[
+  {
+    "nombre": "Admin",
+    "apellido": "Istrador",
+    "DNI": 0,
+    "edad": 0,
+    "password": "holamundo"
+  },
+  {
+    "nombre": "Juan Manuel",
+    "apellido": "Gil Sosa",
+    "DNI": 43386896,
+    "edad": 19,
+    "password": "123456789"
+  },
+  {
+    "nombre": "Ariel",
+    "apellido": "Cervigni",
+    "DNI": 37098210,
+    "edad": 28,
+    "password": "ariel123"
+  },
+  {
+    "nombre": "Julieta",
+    "apellido": "Leuci",
+    "DNI": 33192211,
+    "edad": 32,
+    "password": "juli123"
+  },
+  {
+    "nombre": "Leroy",
+    "apellido": "Sane",
+    "DNI": 40000000,
+    "edad": 24,
+    "password": "leroy123"
+  }
+]

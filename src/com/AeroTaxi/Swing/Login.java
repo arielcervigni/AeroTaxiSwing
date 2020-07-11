@@ -7,25 +7,27 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 public class Login extends JFrame {
-    protected JPanel panel;
-    protected JLabel lb_titulo;
-    protected JLabel lb_descripcion;
-    protected JLabel lb_dni;
-    protected JTextField tf_dni;
-    protected JLabel lb_contraseña;
-    protected JPasswordField tf_pw;
-    protected JButton btn_aceptar;
-    protected JButton btn_registrarse;
-    protected JLabel lb_usuario;
-    protected JLabel jl_titulo;
+    private JPanel panel;
+    private JLabel lb_titulo;
+    private JLabel lb_descripcion;
+    private JLabel lb_dni;
+    private JTextField tf_dni;
+    private JLabel lb_contraseña;
+    private JPasswordField tf_pw;
+    private JButton btn_aceptar;
+    private JButton btn_registrarse;
+    private JLabel lb_usuario;
+    private JLabel jl_titulo;
 
+    public JPanel getPanel() {
+        return panel;
+    }
 
     public Login() {
         super("AeroTaxi.");
         setContentPane(panel);
-        setBounds(20,20,500,500);
         setVisible(true);
-        //pack();
+        setBounds(20,20,500,500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         tf_dni.setFocusable(true);
 
