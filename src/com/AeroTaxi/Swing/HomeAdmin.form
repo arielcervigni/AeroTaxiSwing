@@ -45,18 +45,6 @@
                   <vspacer id="d13b9">
                     <constraints/>
                   </vspacer>
-                  <component id="a300f" class="javax.swing.JMenuItem" binding="eliminarUsuario">
-                    <constraints/>
-                    <properties>
-                      <text value="Eliminar usuario"/>
-                    </properties>
-                  </component>
-                  <component id="5efab" class="javax.swing.JMenuItem" binding="modificarUsuario">
-                    <constraints/>
-                    <properties>
-                      <text value="Modificar usuario"/>
-                    </properties>
-                  </component>
                   <component id="38169" class="javax.swing.JMenuItem" binding="verTodos">
                     <constraints/>
                     <properties>

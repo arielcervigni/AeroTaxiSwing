@@ -21,8 +21,6 @@ public class HomeAdmin extends  JFrame{
     private JMenuItem verReservasDia;
     private JMenuItem crearUsuario;
     private JMenuItem verTodos;
-    private JMenuItem modificarUsuario;
-    private JMenuItem eliminarUsuario;
     private Registro registro;
 
     public JPanel getHomeAdminPanel() {
@@ -52,11 +50,32 @@ public class HomeAdmin extends  JFrame{
                 new Registro(opcion);
             }
         });
-        eliminarUsuario.addActionListener(new ActionListener() {
+        verTodos.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
                 new VerUsuarios();
+            }
+        });
+        crearReserva.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                new CrearReserva();
+            }
+        });
+        verReservasDia.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                new VerReservasDelDia();
+            }
+        });
+        cancelarReserva.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                new CancelarReserva();
             }
         });
 

@@ -71,6 +71,11 @@ public class Registro extends JFrame {
 
     public Registro(int opcion) {
         super("Registrar nuevo usuario.");
+        setContentPane(registro);
+        setVisible(true);
+        setBounds(20,20,500,500);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+
         tf_dni.setToolTipText("Ingrese su número de DNI.");
         tf_pw.setToolTipText("Su contraseña no podrá tener menos de 4 dígitos.");
         tf_nombre.setToolTipText("Ingrese su nombre.");

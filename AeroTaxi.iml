@@ -8,5 +8,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="gson-2.8.2" level="project" />
+    <orderEntry type="library" name="RSCalendar" level="project" />
+    <orderEntry type="library" name="RSCalendar v2.0" level="project" />
+    <orderEntry type="library" name="RSDate" level="project" />
   </component>
 </module>
