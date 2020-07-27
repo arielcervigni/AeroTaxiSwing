@@ -54,8 +54,10 @@ public class CancelarReserva extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 if (!tf_reserva.getText().isEmpty())
                 {
-                    int opcion = JOptionPane.showConfirmDialog(panelCancelarReserva,"¿Desea confirmar la cancelación de la reserva?",
-                            "Confirmar cancelación",JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+                    int opcion = JOptionPane.showOptionDialog(panelCancelarReserva,"¿Desea confirmar la cancelación?",
+                            "Eliga una opción", JOptionPane.YES_NO_CANCEL_OPTION,
+                            JOptionPane.QUESTION_MESSAGE,null,
+                            new Object[] { "Si", "No", "Cancelar"},"Si");
 
                     if (opcion == JOptionPane.OK_OPTION){
                         JOptionPane.showMessageDialog(panelCancelarReserva,"Reserva eliminada con éxito.", "Reserva Eliminada",

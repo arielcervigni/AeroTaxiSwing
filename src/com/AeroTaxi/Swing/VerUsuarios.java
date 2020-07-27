@@ -38,6 +38,9 @@ public class VerUsuarios extends JFrame {
 
     public VerUsuarios() {
 
+        btn_modificar.setEnabled(false);
+        btn_borrar.setEnabled(false);
+        
         File archivoUsuarios = new File("usuarios.json");
         JsonUsuario jsonUsuario = new JsonUsuario();
         usuarios = jsonUsuario.traerUsuarios(archivoUsuarios);
@@ -74,8 +77,6 @@ public class VerUsuarios extends JFrame {
         }
 
 
-        final Usuario[] u = new Usuario[1];
-
         // Elige una sola fila.
         tablaDeUsuarios.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         // Permite ordenar por columna.
@@ -88,41 +89,29 @@ public class VerUsuarios extends JFrame {
         tablaDeUsuarios.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+                btn_modificar.setEnabled(true);
+                btn_borrar.setEnabled(true);
+                Usuario u;
+                u = usuarios.get(tablaDeUsuarios.getSelectedRow());
 
                 if (e.getClickCount() == 2) {
-                    Usuario u = usuarios.get(tablaDeUsuarios.getSelectedRow());
+                    u = usuarios.get(tablaDeUsuarios.getSelectedRow());
                     new PopUpUsuario(u);
                 }
 
-                else if (e.getClickCount() == 1) {
-                    System.out.println("Ahora un click");
-                    btn_modificar.addActionListener(new ActionListener() {
-                        @Override
-                        public void actionPerformed(ActionEvent e) {
-                            System.out.println("Aca");
-                            u[0] = usuarios.get(tablaDeUsuarios.getSelectedRow());
-                            new PopUpUsuario(u[0]);
-                        }
-                    });
-                    btn_borrar.addActionListener(new ActionListener() {
-                        @Override
-                        public void actionPerformed(ActionEvent e) {
-                            int opcion = JOptionPane.showOptionDialog(scrollPanelUsuarios, "¿Desea eliminar el usuario?",
-                                    "Eliga una opción", JOptionPane.YES_NO_CANCEL_OPTION,
-                                    JOptionPane.QUESTION_MESSAGE, null,
-                                    new Object[]{"Si", "No", "Cancelar"}, "Si");
-
-                            if (opcion == JOptionPane.OK_OPTION) {
-                                //getUsuarios().remove(u);
-                                //borrar archivo;
-                                //setVisible(false);
-                            }
-                        }
-                    });
-                }
 
             }
         });
+
+        btn_modificar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Usuario u = usuarios.get(tablaDeUsuarios.getSelectedRow());
+                new PopUpUsuario(u);
+            }
+        });
+
+
         btn_cancelar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
